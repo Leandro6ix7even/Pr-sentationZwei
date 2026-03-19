@@ -4,7 +4,7 @@ class Program
 {
     static void Main()
     {
-        int result = Add(10, 3);
+        int result = Add(10, 5);
 
         Console.WriteLine("Test wird ausgeführt...");
 
