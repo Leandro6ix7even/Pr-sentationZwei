@@ -3,13 +3,19 @@ name: DevOps Test
 on: [push]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
 
-      - name: Run Program
-        run: |
-          echo "Test wird ausgeführt..."
-          echo "Fehler erkannt"
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Build
+        run: dotnet build
+
+      - name: Run
+        run: dotnet run
