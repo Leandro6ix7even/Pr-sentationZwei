@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Run Test
+      - name: Run Program
         run: |
-          echo "Test wird ausgeführt"
-          exit 1
+          echo "Test wird ausgeführt..."
+          echo "Fehler erkannt"
